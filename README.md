@@ -8,4 +8,4 @@
 
 #manager page
 
-![doggy](http://ted-movie.jp/img/ted.png)
+![doggy](https://upload.wikimedia.org/wikipedia/zh/thumb/e/ed/Bart_Simpson.svg/686px-Bart_Simpson.svg.png)
