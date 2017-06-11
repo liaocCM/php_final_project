@@ -8,4 +8,4 @@
 
 #manager page
 
-![doggy](https://goo.gl/x65jQl)
+![doggy](http://ted-movie.jp/img/ted.png)
