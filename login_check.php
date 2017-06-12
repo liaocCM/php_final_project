@@ -1,5 +1,5 @@
 <?php
-	require_once('connect.php');
+    require_once('connect.php');
     $account = $_POST['taccount'];
     $password = $_POST['tpassword'];
     $sql = "select * from members_info where account = '".$account."'";
@@ -10,7 +10,7 @@
             echo 'Welcome '.$asso_result['account'].' !';
         }
         else {
-        echo 'Your password is not correct.';
+            echo 'Your password is not correct.';
         }
 	}
     else {
