@@ -38,10 +38,9 @@
 		position: absolute;
 		top: 0;
 		right: 0;
-		color: #f1f1f1;
+		color: #ffffff;
 		font-size: 40px;
 		font-weight: bold;
-		
 	}
 	label{
 		color:white;
@@ -66,14 +65,14 @@
     <div class="container" align="center">
     	<div class="row">
     		<h1>ChenLW</h1>
-    		<div class="col-sm-12 .col-xs-10 ">
-    		<form role="form" action="" method="post">
+    		<div class="col-sm-12 col-xs-10 ">
+    		<form role="form" action="Prediction.php" method="post">
     			<div class="form-group">
     				<h2 >Login</h2>
-    				<input type="text" name="taccount" class="form-control" placeholder="Enter your account">
+    				<input type="text" name="taccount" class="form-control" placeholder="Enter your account" required>
     			</div>
     			<div class="form-group">
-    				<input type="text" name="tpassword" class="form-control" placeholder="Enter your password">
+    				<input type="password" name="tpassword" class="form-control" placeholder="Enter your password" required>
     			</div>
     			<button type="submit" class="btn btn-primary btn-lg my_btn" value="submit">Sign in</button>
     		</form>
@@ -91,22 +90,22 @@
     		<form role="form" action="" method="post">
     			<div class="form-group">
 					<label class="control-label col-sm-7" for="account">Account:</label>
-    				<input type="text" name="taccount" class="form-control" placeholder="Enter your account" >
+    				<input type="text" name="taccount" class="form-control" placeholder="Enter your account" required>
     			</div>
     			<div class="form-group">
 					<label class="control-label col-sm-7" for="pasword">PassWord:</label>
-					<input type="text" name="tpassword" class="form-control" placeholder="Enter your password">
+					<input type="password" name="tpassword" class="form-control" placeholder="Enter your password" required>
     			</div>
 				<div class="form-group">
 					<label class="control-label col-sm-7" for="pasword2">PassWord Again:</label>
-					<input type="text" name="tpassword2" class="form-control" placeholder="Enter your password again">
+					<input type="password" name="tpassword2" class="form-control" placeholder="Enter your password again" required>
 				</div>
 				<div  class="form-group">
 					<label class="control-label col-sm-7" for="email">Email:</label>
-					<input type="text" name="email" class="form-control" placeholder="Enter your email">
+					<input type="text" name="email" class="form-control" placeholder="Enter your email" required>
 				</div>
     		</form>
-    		<button type="submit" class="btn btn-warning btn-lg my_btn" value="submit">Sign up</button>
+    		<button type="submit" class="btn btn-success btn-lg my_btn" value="submit">Sign up</button>
     		</div>
     	</div>
     </div>
@@ -114,6 +113,6 @@
     <script src="js/jquery-3.2.1.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-	 <script src="signUp.js"></script>
+	<script src="signUp.js"></script>
   </body>
 </html>
