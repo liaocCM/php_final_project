@@ -34,6 +34,25 @@
     btn-warning{
     	color: #FFE66D;
     }
+	.close{
+		position: absolute;
+		top: 0;
+		right: 0;
+		color: #f1f1f1;
+		font-size: 40px;
+		font-weight: bold;
+		
+	}
+	label{
+		color:white;
+		font-size:20px;
+		
+	}
+	.modal{
+		background-color:black;
+		opacity:0.9;
+		height:500px;
+	}
     </style>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -43,20 +62,49 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body align="center">
-    <div class="container">
+  <body >
+    <div class="container" align="center">
     	<div class="row">
     		<h1>ChenLW</h1>
-    		<div class="col-sm-12 ">
+    		<div class="col-sm-12 .col-xs-10 ">
     		<form role="form" action="" method="post">
     			<div class="form-group">
-    				<h2>Login</h2>
+    				<h2 >Login</h2>
     				<input type="text" name="taccount" class="form-control" placeholder="Enter your account">
     			</div>
     			<div class="form-group">
     				<input type="text" name="tpassword" class="form-control" placeholder="Enter your password">
     			</div>
     			<button type="submit" class="btn btn-primary btn-lg my_btn" value="submit">Sign in</button>
+    		</form>
+    		<button type="submit" class="btn btn-warning btn-lg my_btn" value="submit" onclick="openSingUp()">Sign up</button>
+    		</div>
+    	</div>
+    </div>
+	
+	
+	  <div class="container modal"  id="signUp">
+	   <span class="close" onclick="closeSingUp()">&times;</span>
+    	<div class="row">
+    		<h2 align="center">Sign Up</h2>
+    		<div class="col-sm-12 .col-xs-10 ">
+    		<form role="form" action="" method="post">
+    			<div class="form-group">
+					<label class="control-label col-sm-7" for="account">Account:</label>
+    				<input type="text" name="taccount" class="form-control" placeholder="Enter your account" >
+    			</div>
+    			<div class="form-group">
+					<label class="control-label col-sm-7" for="pasword">PassWord:</label>
+					<input type="text" name="tpassword" class="form-control" placeholder="Enter your password">
+    			</div>
+				<div class="form-group">
+					<label class="control-label col-sm-7" for="pasword2">PassWord Again:</label>
+					<input type="text" name="tpassword2" class="form-control" placeholder="Enter your password again">
+				</div>
+				<div  class="form-group">
+					<label class="control-label col-sm-7" for="email">Email:</label>
+					<input type="text" name="email" class="form-control" placeholder="Enter your email">
+				</div>
     		</form>
     		<button type="submit" class="btn btn-warning btn-lg my_btn" value="submit">Sign up</button>
     		</div>
@@ -66,5 +114,6 @@
     <script src="js/jquery-3.2.1.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+	 <script src="signUp.js"></script>
   </body>
 </html>
