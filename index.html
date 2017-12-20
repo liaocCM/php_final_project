@@ -9,18 +9,26 @@
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700" rel="stylesheet">
     <style type="text/css">
     h1 {
-    	font-size: 70px;
+    	font-size: 100px;
     }
     h1 ,h2{
     	color: white;
+		font-family: 'Open Sans Condensed', sans-serif;
     }
+	h2 {
+		margin-bottom: 30px;
+		font-size:60px;
+	}
     body{
     	background-color: #2F3061;
+		background-image: url(img/bg3.jpg);
+		background-size: cover;
     }
     .container {
-    		background-color: #2F3061;
+    		
     		margin-top: 100px;
     		width: 400px;
     }
@@ -28,11 +36,8 @@
     	font-size: 28px;
     }
     .my_btn {
-    	margin-bottom: 20px;
-    	width: 350px;
-    }
-    btn-warning{
-    	color: #FFE66D;
+		margin-top: 20px;
+		width: 250px;
     }
 	.close{
 		position: absolute;
@@ -51,6 +56,50 @@
 		background-color:black;
 		opacity:0.9;
 		height:500px;
+		width:300px;
+	}
+	.pulse{
+	animation-name: pulse;
+	-webkit-animation-name: pulse;	
+
+	animation-duration: 3s;	
+	-webkit-animation-duration: 3s;
+
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+	}
+
+	@keyframes pulse {
+		0% {
+			transform: scale(0.9);
+			opacity: 0.7;
+			color:#1a3443;		
+		}
+		50% {
+			transform: scale(1);
+			opacity: 1;
+			color:#50796b;	
+		}	
+		100% {
+			transform: scale(0.9);
+			opacity: 0.7;	
+			color:#1a3443;	
+		}			
+	}
+
+	@-webkit-keyframes pulse {
+		0% {
+			-webkit-transform: scale(0.95);
+			opacity: 0.7;		
+		}
+		50% {
+			-webkit-transform: scale(1);
+			opacity: 1;	
+		}	
+		100% {
+			-webkit-transform: scale(0.95);
+			opacity: 0.7;	
+		}			
 	}
     </style>
 
@@ -61,14 +110,14 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body >
+  <body>
     <div class="container" align="center">
     	<div class="row">
-    		<h1>ChenLW</h1>
+    		<h1 class="pulse"><strong>ChenLW</strong></h1>
     		<div class="col-sm-12 col-xs-10 ">
-    		<form role="form" action="Prediction.php" method="post">
+    		<form role="form" action="loginCheck.php" method="post">
     			<div class="form-group">
-    				<h2 >Login</h2>
+    				<h2><strong>Login</strong></h2>
     				<input type="text" name="taccount" class="form-control" placeholder="Enter your account" required>
     			</div>
     			<div class="form-group">
@@ -76,36 +125,36 @@
     			</div>
     			<button type="submit" class="btn btn-primary btn-lg my_btn" value="submit">Sign in</button>
     		</form>
-    		<button type="submit" class="btn btn-warning btn-lg my_btn" value="submit" onclick="openSingUp()">Sign up</button>
+    		<button class="btn btn-warning btn-lg my_btn" value="submit" onclick="openSingUp()">Sign up</button>
     		</div>
     	</div>
     </div>
 	
 	
-	  <div class="container modal"  id="signUp">
+	  <div class="container modal"  id="signUp" >
 	   <span class="close" onclick="closeSingUp()">&times;</span>
     	<div class="row">
     		<h2 align="center">Sign Up</h2>
     		<div class="col-sm-12 .col-xs-10 ">
-    		<form role="form" action="" method="post">
+    		<form role="form" action="signUp.php" method="post">
     			<div class="form-group">
-					<label class="control-label col-sm-7" for="account">Account:</label>
+					<label class="control-label" for="account">Account:</label>
     				<input type="text" name="taccount" class="form-control" placeholder="Enter your account" required>
     			</div>
     			<div class="form-group">
-					<label class="control-label col-sm-7" for="pasword">PassWord:</label>
-					<input type="password" name="tpassword" class="form-control" placeholder="Enter your password" required>
+					<label class="control-label" for="pasword">Password:</label>
+					<input id = "pw1" type="password" name="tpassword" class="form-control" placeholder="Enter your password" required>
     			</div>
 				<div class="form-group">
-					<label class="control-label col-sm-7" for="pasword2">PassWord Again:</label>
-					<input type="password" name="tpassword2" class="form-control" placeholder="Enter your password again" required>
-				</div>
+					<label class="control-label" for="pasword2">Password Again:</label>
+					<input id = "pw2" type="password" name="tpassword2" class="form-control" onkeyup="validate()" placeholder="Enter your password again" required>
+				</div>	
 				<div  class="form-group">
-					<label class="control-label col-sm-7" for="email">Email:</label>
-					<input type="text" name="email" class="form-control" placeholder="Enter your email" required>
+					<label class="control-label" for="email">Email:</label>
+					<input type="email" name="temail" class="form-control" placeholder="Enter your email" required>
 				</div>
+				<button type="submit" class="btn btn-success btn-lg my_btn" value="submit">Sign up</button>
     		</form>
-    		<button type="submit" class="btn btn-success btn-lg my_btn" value="submit">Sign up</button>
     		</div>
     	</div>
     </div>
@@ -113,6 +162,7 @@
     <script src="js/jquery-3.2.1.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-	<script src="signUp.js"></script>
+	<!-- put js code inside-->
+	<script src="js/my.js"></script>
   </body>
 </html>

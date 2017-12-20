@@ -1,0 +1,141 @@
+span{
+		font-size:5px;
+}
+nav,.navbar-brand {
+		font-size:24px;
+		font-weight:bold;
+}
+.opa:hover{
+	opacity: 0.5;
+}
+table{
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 22px;
+}
+.navbar-inverse {
+    background-color: #0d1927;
+	border-color:#0d1927;
+}
+#links{
+	color:white;
+}
+#userCoin {
+	color:#FFC857
+}
+#account {
+	color:#EE964B;
+}
+
+
+h1{
+	font-size:70px;
+	padding-left:0;
+	color:#ffcc00;
+}
+html body{
+	background-color: #2F3061;
+	color:white;
+	background-image: url(img/bg3.jpg);
+	background-size:cover;
+}
+.table th{
+	color:white;
+	background-color:#132239;
+	text-align: center;
+}
+.table tr{
+	color:#174550;
+	text-align: center;
+}
+.table td{
+	background-color: rgba(255, 255, 255, 0.31);
+}
+.table-hover tbody tr:hover td {
+	background-color: grey;
+}
+h2 {
+	 font-family: 'Raleway',sans-serif;
+	 line-height: 48px;
+}	
+h2:hover{
+	color:#ff6317;
+}
+#betting.close{
+	position: absolute;
+	top: 0;
+	right: 100;
+	color: white;
+	font-size: 40px;
+	font-weight: bold;
+}
+#betting h2{
+	font-size: 40px;
+	color: #ffffff;
+}
+.modal{
+	margin-top:100px; 
+	background-color:black;
+	height:400px;
+	padding-top:50px;
+}
+#betting .close{
+	position: absolute;
+	right: 10px;
+	top:0;
+	color: #ffffff;
+	font-size: 40px;
+	font-weight: bold;
+}
+#betting input{
+	color:black;
+}
+#betting td{
+	font-size:25px;
+	padding-top:20px;
+}
+#betting #tableBet2 td{
+	padding :10px;
+}
+/*animate*/
+.pulse{
+
+	animation-name: pulse;
+	-webkit-animation-name: pulse;	
+
+	animation-duration: 1.5s;	
+	-webkit-animation-duration: 1.5s;
+
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(0.9);
+		opacity: 0.7;		
+	}
+	50% {
+		transform: scale(1);
+		opacity: 1;	
+	}	
+	100% {
+		transform: scale(0.9);
+		opacity: 0.7;	
+	}			
+}
+
+@-webkit-keyframes pulse {
+	0% {
+		-webkit-transform: scale(0.95);
+		opacity: 0.7;		
+	}
+	50% {
+		-webkit-transform: scale(1);
+		opacity: 1;	
+	}	
+	100% {
+		-webkit-transform: scale(0.95);
+		opacity: 0.7;	
+	}			
+}
+
